@@ -673,4 +673,4 @@ public List<Map<String, Object>> queryAll() {
 
 ### 总结
 
-​		Spring对JDBC的支持主要是使用JdbcTemplate，虽然JdbcTemplate将创建连接、创建语句、关闭连接、关闭结果集和sql异常处理做了很好的封装，但是还有待完善。下一节我们再聊聊更简单的JPA。
+​		Spring对JDBC的支持主要是使用JdbcTemplate，虽然JdbcTemplate将创建连接、创建语句、关闭连接、关闭结果集和sql异常处理等做了很好的封装，但是还有待完善。下一节我们再聊聊更简单的JPA。
