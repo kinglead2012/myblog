@@ -9,8 +9,8 @@
 create table t_user
 (
    id                   bigint not null auto_increment comment 'id:主键',
-   name                 varchar(8) not null comment '姓名',
-   password             varchar(8) comment '性别',
+   name                 varchar(20) not null comment '姓名',
+   password             varchar(20) not null comment '密码',
    primary key (id)
 );
 
