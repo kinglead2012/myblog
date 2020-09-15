@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    username: root
+    password: tx@mysql@2020
+    url: jdbc:mysql://188.131.233.55:3306/spring_boot_topic
+    driver-class-name: com.mysql.cj.jdbc.Driver
