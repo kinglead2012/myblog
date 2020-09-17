@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    username: root
+    password: tx@mysql@2020
+    url: jdbc:mysql://188.131.233.55:3306/spring_boot_topic
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  # 如果Mapper.java和Mapper.xml在同一个包下，可以不用设置
+  mapper-locations: classpath:mapper/*.xml
