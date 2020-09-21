@@ -1,0 +1,13 @@
+# DataSource Config
+spring:
+  datasource:
+    username: root
+    password: tx@mysql@2020
+    url: jdbc:mysql://188.131.233.55:3306/spring_boot_topic
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    driver-class-name: org.h2.Driver
+#    schema: classpath:db/schema-h2.sql
+#    data: classpath:db/data.sql
+#    url: jdbc:h2:mem:test
+#    username: root
+#    password: test
