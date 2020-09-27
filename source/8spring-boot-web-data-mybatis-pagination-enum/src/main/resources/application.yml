@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    username: root
+    password: tx@mysql@2020
+    url: jdbc:mysql://188.131.233.55:3306/spring_boot_topic
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  # 如果Mapper.java和Mapper.xml在同一个包下，可以不用设置
+  mapper-locations: classpath:mapper/*.xml
+
+#配置分页插件pagehelper
+pagehelper:
+  helperDialect: mysql  #设置数据库
+  reasonable: true  #分页参数合理化，默认是false.当启用合理化时，如果pageNum>pageSize,默认会查询最后一页的数据。禁用合理化后，当pageNum>pageSize会返回空数据
+  supportMethodsArguments: false #如果入参中有分页参数，是否自动分页，默认是false
+  #params: count=countSql
+
+kinglead:
+  mybatis:
+    # 设置 BaseEnum 实现的枚举类所在的package，设置完这个后，mapper.xml中不需要再手动指定TypeHandler
+    baseEnumPackages: com.kinglead.demo.enums
