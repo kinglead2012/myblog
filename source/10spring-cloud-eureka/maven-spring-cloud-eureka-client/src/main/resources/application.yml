@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: user-service #服务名
+server:
+  port: 9200
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/  #Eureka服务端地址。配置多个地址，使用逗号进行分割，它将会一个一个进行尝试注册

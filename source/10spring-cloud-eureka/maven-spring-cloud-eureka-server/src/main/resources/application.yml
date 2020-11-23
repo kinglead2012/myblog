@@ -1,0 +1,17 @@
+server:
+  port: 9000
+eureka:
+  instance:
+    hostname: localhost #标识正运行在哪台服务器上
+  server:
+    #自我保护：开启时，能将已停止的服务的注册项保存下来，另一个服务访问已经不可用的服务时就会产生问题，关闭自我保护功能，能防止这种问题出现。
+    #生产环境建议开启，开发环境建议关闭。
+    enable-self-preservation: false
+  client:
+    #register-with-eureka、fetch-registry：是否与Eureka服务进行交互，即是否集群
+    register-with-eureka: false
+    fetch-registry: false
+    #设置与Eureka注册中心交互的地址，查询服务和注册服务用到
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #单机
+      # defaultZone: http://eureka9001.kinglead.com:9001/eureka/,http://eureka9002.kinglead.com:9002/eureka/ # 集群

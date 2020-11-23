@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: service-feign
+server:
+  port: 8001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+feign:
+  hystrix:
+    enabled: true #开启断路器
+
+ribbon:
+  ReadTimeout: 13000
+  ConnectTimeout: 13000
+  MaxTotalConnections: 1000 #连接池最大连接数
+  MaxConnectionsPerHost: 50 #每个host最大使用连接数
+
+#hystrix断路参数配置
+hystrix:
+  command:
+    default: #default时为默认配置, 相关参数说明在 HystrixCommandProperties
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+  #线程池隔离策略时，线程池参数配置
+  threadpool:
+    default: #默认配置，单独配置时改为serverId
+      allowMaximumSizeToDivergeFromCoreSize: true #是否允许coreSize扩展到maximumSize，为false时仅coreSize生效，相当于FixedThreadPool
+      coreSize: 30
+      maximumSize: 50
+      keepAliveTimeMinutes: 60
+      maxQueueSize: 50
+
